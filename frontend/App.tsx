@@ -1,12 +1,20 @@
 import { StatusBar } from 'expo-status-bar';
 import React from 'react';
 import { StyleSheet, Text, View } from 'react-native';
+import { IntlProvider, FormattedMessage } from 'react-intl'
+import { messages } from './src/i18n/Config'
+
+const lang = navigator.language
 
 export default function App() {
   return (
     <View style={styles.container}>
-      <Text>Open up App.tsx to start working on your app!</Text>
-      <StatusBar style="auto" />
+      <IntlProvider locale={lang} messages={messages['pl_PL']}>
+        <Text>
+          <FormattedMessage id='word.hello' />
+        </Text>
+        <StatusBar style="auto" />
+      </IntlProvider>
     </View>
   );
 }
