@@ -3,7 +3,7 @@ import i18n from 'i18n-js';
 import messeges_en from './en.json'
 import messeges_pl from './pl.json'
 
-export default function language(message: any) {
+export default function message(message: any) {
     i18n.translations = {
         en: messeges_en,
         pl: messeges_pl,
