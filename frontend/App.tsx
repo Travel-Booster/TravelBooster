@@ -1,6 +1,6 @@
-import { StatusBar } from 'expo-status-bar';
-import React from 'react';
-import { StyleSheet, Text, View } from 'react-native';
+import React from 'react'
+import { StyleSheet, Text, View } from 'react-native'
+import { StatusBar } from 'expo-status-bar'
 import { IntlProvider, FormattedMessage } from 'react-intl'
 import { messages } from './src/i18n/Config'
 
@@ -13,10 +13,10 @@ export default function App() {
         <Text>
           <FormattedMessage id='word.hello' />
         </Text>
-        <StatusBar style="auto" />
+        <StatusBar style='auto' />
       </IntlProvider>
     </View>
-  );
+  )
 }
 
 const styles = StyleSheet.create({
@@ -26,4 +26,4 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     justifyContent: 'center',
   },
-});
+})
