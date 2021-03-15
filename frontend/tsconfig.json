@@ -1,17 +1,18 @@
 {
-  "compilerOptions": {
-    "jsx": "react-native",
-    "resolveJsonModule": true,
-    "baseUrl": "./src",   
-    "paths" : {
-      "tslib": [
-        " jspm_packages/npm/tslib@2.xy/ tslib.d.ts" 
-      ]
-    },
-    "allowSyntheticDefaultImports": true,
-  },
-  "exclude": [
-    "node_modules"
-  ],
-  "compileOnSave": false
+    "compilerOptions": {
+        "noEmit": true,
+        "lib": [ "dom", "esnext" ],
+        "jsx": "react-native",
+        "moduleResolution": "node",
+        "resolveJsonModule": true,
+        "allowSyntheticDefaultImports": true,
+        "skipLibCheck": true,
+        "strictBindCallApply": true,
+        "strictNullChecks": true,
+        "strictPropertyInitialization": true,
+        "noImplicitAny": true,
+        "noImplicitThis": true,
+        "noImplicitReturns": true,
+        "baseUrl": "./src"
+    }
 }
