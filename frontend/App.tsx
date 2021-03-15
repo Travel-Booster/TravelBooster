@@ -1,7 +1,7 @@
 import React from 'react'
 import { StatusBar } from 'expo-status-bar'
 import { StyleSheet, View } from 'react-native'
-import { TextComponent } from './src/components/TextComponent'
+import { TextComponent } from 'components/ui/Text/'
 
 const App = () => {
   return (
