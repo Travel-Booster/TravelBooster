@@ -6,6 +6,8 @@ type TextComponentProps = {
   text: string
 }
 
-export const TextComponent = memo<TextComponentProps>(({ text }) => {
+const TextComponent = memo<TextComponentProps>(({ text }) => {
   return <Text>{message(text)}</Text>
 })
+
+export default TextComponent
