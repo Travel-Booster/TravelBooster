@@ -1,19 +1,18 @@
 import * as Localization from 'expo-localization'
 import i18n from 'i18n-js'
-import messeges_en from './en.json'
-import messeges_pl from './pl.json'
+import messeges_en from 'services/i18n/en.json'
+import messeges_pl from 'services/i18n/pl.json'
 
 //default language is taken from phone settings
 let language = Localization.locale
 
 //function that changes the language
-const setLanguage = (newLang: string) => {
+export const setLanguage = (newLang: string) => {
   language = newLang
 }
 
 // setLanguage('en-US')
-
-const message = (message: string) => {
+export const message = (message: string) => {
   i18n.translations = {
     en: messeges_en,
     pl: messeges_pl,
@@ -24,6 +23,3 @@ const message = (message: string) => {
   i18n.fallbacks = true
   return i18n.t(message)
 }
-
-export default message
-export { setLanguage }
