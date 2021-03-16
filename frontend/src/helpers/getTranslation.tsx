@@ -2,7 +2,21 @@ import * as Localization from 'expo-localization'
 import i18n from 'i18n-js'
 import messeges_en from 'services/i18n/en.json'
 import messeges_pl from 'services/i18n/pl.json'
-
+/**
+ * Jira client library
+ *
+ * @example
+ * const jira = new Jira({
+ *   host: 'yourhost',
+ *   user: 'jhn@doe.com',
+ *   token: 'secret',
+ * })
+ *
+ * const projects = await jira.projects()
+ *
+ * @see  https://developer.atlassian.com/cloud/jira/platform/rest/v3
+ * @todo  implement all methods
+ */
 //default language is taken from phone settings
 let language = Localization.locale
 
