@@ -13,6 +13,16 @@
         "noImplicitAny": true,
         "noImplicitThis": true,
         "noImplicitReturns": true,
-        "baseUrl": "./src"
+        "baseUrl": "./src",      
+        "target": "ESNext",
+        "module":"CommonJS",
+        "sourceMap": true,
+        "esModuleInterop": true
+    },
+    "typedocOptions": {
+        "entryPoints": ["./src"],
+        "out": "docs",
+        "name": "TravelBooster TypeDoc",
+        "theme": "minimal"
     }
 }
