@@ -9,7 +9,7 @@
         "excludePattern": "(node_modules/|docs)"
     },
     "plugins": [
-        "node_modules/better-docs/typescript"
+        "node_modules/better-docs/typescript", "plugins/markdown", "better-docs/component"
     
     ],
     "typescript": {

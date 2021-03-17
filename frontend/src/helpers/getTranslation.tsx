@@ -4,31 +4,29 @@ import messeges_en from 'services/i18n/en.json'
 import messeges_pl from 'services/i18n/pl.json'
 /**
  * Default language is taken from phone settings <br/>
- * Language is used for TextComponent
- * @namespace getTranslation
- * @memberof app.components
- * @protected
- * @see message
- * @see TextComponent
- * @example
- * let language = Localization.locale
+ * @type {string}
+ * @property {string} language - language that is used in an app
+ *
  */
-let language = Localization.locale
+let language: string = Localization.locale
 
 /**
  * Function that changes the language
- * @param newLang newlang
+ * @param {string} newLanguage - desired language
+ * @example
+ * setLanguage='en-US'
  */
-export const setLanguage = (newLang: string) => {
-  language = newLang
+const setLanguage = (newLanguage: string) => {
+  language = newLanguage
 }
 
 /**
- * Function that returns message in @{language} ${text} `component`
- * @param message msg
- * @returns nothing
+ * Function that returns message for TextComponent
+ * @see TextComponent
+ * @param {string} message - message taken from database
+ * @returns {string} - message
  */
-export const message = (message: string) => {
+const message = (message: string) => {
   i18n.translations = {
     en: messeges_en,
     pl: messeges_pl,
@@ -39,3 +37,4 @@ export const message = (message: string) => {
   i18n.fallbacks = true
   return i18n.t(message)
 }
+export { setLanguage, message }

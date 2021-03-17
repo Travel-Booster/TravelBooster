@@ -72,7 +72,7 @@
             
             <nav>
                 
-                    <h2><a href="index.html">Documentation</a></h2><div class="category"><h3>Namespaces</h3><ul><li><a href="app.components.getTranslation.html">getTranslation</a></li><li><a href="app.components.TextComponent.html">TextComponent</a></li></ul><h3>Global</h3><ul><li><a href="global.html#message">message</a></li><li><a href="global.html#setLanguage">setLanguage</a></li></ul></div>
+                    <h2><a href="index.html">Documentation</a></h2><div class="category"><h3>Components</h3><ul><li><a href="TextComponent.html">TextComponent</a></li></ul><h3>Global</h3><ul><li><a href="global.html#language">language</a></li><li><a href="global.html#message">message</a></li><li><a href="global.html#setLanguage">setLanguage</a></li></ul></div>
                 
             </nav>
         </div>
@@ -97,9 +97,14 @@ type TextComponentProps = {
   text: string
 }
 /**
- * @namespace TextComponent
- * @memberof app.components
+ * Function that returns a component &lt;br/>
+ * Uses message function to return desired text
+ * @component
+ * @see message
+ * @param {string} text - text
+ * @returns `&lt;Text>message(text)&lt;/Text>`
  */
+
 const TextComponent = memo&lt;TextComponentProps>(({ text }) => {
   return &lt;Text>{message(text)}&lt;/Text>
 })
