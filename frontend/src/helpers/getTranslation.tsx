@@ -6,7 +6,6 @@ import messeges_pl from 'services/i18n/pl.json'
  * Default language is taken from phone settings <br/>
  * @type {string}
  * @property {string} language - language that is used in an app
- *
  */
 let language: string = Localization.locale
 
