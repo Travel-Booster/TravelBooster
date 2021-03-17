@@ -72,7 +72,7 @@
             
             <nav>
                 
-                    <h2><a href="index.html">Documentation</a></h2><div class="category"><h3>Global</h3><ul><li><a href="global.html#language">language</a></li><li><a href="global.html#message">message</a></li><li><a href="global.html#setLanguage">setLanguage</a></li><li><a href="global.html#TextComponent">TextComponent</a></li></ul></div>
+                    <h2><a href="index.html">Documentation</a></h2><div class="category"><h3>Namespaces</h3><ul><li><a href="app.components.getTranslation.html">getTranslation</a></li><li><a href="app.components.TextComponent.html">TextComponent</a></li></ul><h3>Global</h3><ul><li><a href="global.html#message">message</a></li><li><a href="global.html#setLanguage">setLanguage</a></li></ul></div>
                 
             </nav>
         </div>
@@ -97,19 +97,8 @@ type TextComponentProps = {
   text: string
 }
 /**
- * Jira client library
- *
- * @example
- * const jira = new Jira({
- *   host: 'yourhost',
- *   user: 'jhn@doe.com',
- *   token: 'secret',
- * })
- *
- * const projects = await jira.projects()
- *
- * @see  https://developer.atlassian.com/cloud/jira/platform/rest/v3
- * @todo  implement all methods
+ * @namespace TextComponent
+ * @memberof app.components
  */
 const TextComponent = memo&lt;TextComponentProps>(({ text }) => {
   return &lt;Text>{message(text)}&lt;/Text>

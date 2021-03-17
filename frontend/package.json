@@ -6,7 +6,9 @@
     "ios": "expo start --ios",
     "web": "expo start --web",
     "eject": "expo eject",
-    "docs": "./node_modules/.bin/jsdoc -c jsdoc.json"
+    "build:docs": "./node_modules/.bin/jsdoc -c jsdoc.json",
+    "watch:doc-src": "watch \"npm run build:docs\" ./src"
+   
   },
   "dependencies": {
     "axios": "^0.21.1",
@@ -34,6 +36,8 @@
     "eslint": "^7.21.0",
     "eslint-plugin-react-native": "^3.10.0",
     "jsdoc-babel": "^0.5.0",
+    "livereload": "^0.9.2",
+    "nodemon": "^2.0.7",
     "typescript": "~4.0.0"
   },
   "private": true

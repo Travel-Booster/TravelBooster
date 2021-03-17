@@ -3,16 +3,20 @@ import i18n from 'i18n-js'
 import messeges_en from 'services/i18n/en.json'
 import messeges_pl from 'services/i18n/pl.json'
 /**
- * Default language is taken from phone settings
+ * Default language is taken from phone settings <br/>
+ * Language is used for TextComponent
+ * @namespace getTranslation
+ * @memberof app.components
+ * @protected
+ * @see message
+ * @see TextComponent
  * @example
  * let language = Localization.locale
- * @see  https://developer.atlassian.com/cloud/jira/platform/rest/v3
- * @todo  implement all methods
  */
 let language = Localization.locale
 
 /**
- * function that changes the language
+ * Function that changes the language
  * @param newLang newlang
  */
 export const setLanguage = (newLang: string) => {
@@ -20,7 +24,7 @@ export const setLanguage = (newLang: string) => {
 }
 
 /**
- * sth here
+ * Function that returns message in @{language} ${text} `component`
  * @param message msg
  * @returns nothing
  */
