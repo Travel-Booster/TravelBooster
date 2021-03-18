@@ -72,7 +72,7 @@
             
             <nav>
                 
-                    <h2><a href="index.html">Documentation</a></h2><div class="category"><h3>Components</h3><ul><li><a href="TextComponent.html">TextComponent</a></li></ul><h3>Global</h3><ul><li><a href="global.html#language">language</a></li><li><a href="global.html#message">message</a></li><li><a href="global.html#setLanguage">setLanguage</a></li></ul></div>
+                    <h2><a href="index.html">Documentation</a></h2><div class="category"><h3>Global</h3><ul><li><a href="global.html#language">language</a></li><li><a href="global.html#message">message</a></li><li><a href="global.html#setLanguage">setLanguage</a></li><li><a href="global.html#TextComponent">TextComponent</a></li></ul></div>
                 
             </nav>
         </div>
@@ -93,18 +93,19 @@
 import { Text } from 'react-native'
 import { message } from 'helpers/getTranslation'
 
+/**
+ * Props types
+ */
 type TextComponentProps = {
   text: string
 }
-/**
- * Function that returns a component &lt;br/>
- * Uses message function to return desired text
- * @component
- * @see message
- * @param {string} text - text
- * @returns `&lt;Text>message(text)&lt;/Text>`
- */
 
+/**
+ * Text Component
+ * @description Uses message function to return desired text
+ * @param {string} text - tranlation from i18n
+ * @returns {object} - return component with children
+ */
 const TextComponent = memo&lt;TextComponentProps>(({ text }) => {
   return &lt;Text>{message(text)}&lt;/Text>
 })

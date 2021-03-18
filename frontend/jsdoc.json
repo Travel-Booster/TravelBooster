@@ -15,9 +15,9 @@
     "typescript": {
         "moduleRoot": "test"
     },
-     "templates": {
-      "better-docs": {
-          "name": "My React components"
+    "templates": {
+        "better-docs": {
+            "name": "My React components"
         }
     },
     "opts": {
@@ -27,5 +27,3 @@
         "readme": "README.md"
     }
 }
-
-

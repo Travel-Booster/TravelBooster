@@ -70,7 +70,7 @@
             
             <nav>
                 
-                    <h2><a href="index.html">Documentation</a></h2><div class="category"><h3>Components</h3><ul><li><a href="TextComponent.html">TextComponent</a></li></ul><h3>Global</h3><ul><li><a href="global.html#language">language</a></li><li><a href="global.html#message">message</a></li><li><a href="global.html#setLanguage">setLanguage</a></li></ul></div>
+                    <h2><a href="index.html">Documentation</a></h2><div class="category"><h3>Global</h3><ul><li><a href="global.html#language">language</a></li><li><a href="global.html#message">message</a></li><li><a href="global.html#setLanguage">setLanguage</a></li><li><a href="global.html#TextComponent">TextComponent</a></li></ul></div>
                 
             </nav>
         </div>
@@ -181,7 +181,7 @@
 
 
 <div class="description">
-    <p>Default language is taken from phone settings <br/></p>
+    <p>Default language is taken from phone settings</p>
 </div>
 
 
@@ -285,6 +285,86 @@
 
 
 
+    <h5>Example</h5>
+    
+    
+        <pre class="prettyprint"><code>'en-EN'</code></pre>
+    
+
+
+</div>
+            
+                <div class="member">
+
+<h4 class="name" id="TextComponent">
+    <a class="href-link" href="#TextComponent">#</a>
+    
+        
+            <span class='tag'>constant</span>
+        
+    
+    <span class="code-name">
+        TextComponent
+    </span>
+    
+</h4>
+
+
+
+
+<div class="description">
+    <p>Uses message function to return desired text</p>
+</div>
+
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    
+
+    
+
+    
+
+    
+        <p class="tag-source">
+            <a href="components_ui_TextComponent_TextComponent.tsx.html" class="button">View Source</a>
+            <span>
+                <a href="components_ui_TextComponent_TextComponent.tsx.html">components/ui/TextComponent/TextComponent.tsx</a>, <a href="components_ui_TextComponent_TextComponent.tsx.html#line11">line 11</a>
+            </span>
+        </p>
+    
+</dl>
+
+
+
+
+
 </div>
             
             </div>
@@ -305,7 +385,7 @@
         
         <span class="code-name">
             
-                message<span class="signature">(message)</span><span class="type-signature"> &rarr; {string}</span>
+                message<span class="signature">(message)</span><span class="type-signature"></span>
             
         </span>
     </h4>
@@ -412,7 +492,7 @@
     <dt class="tag-see">See:</dt>
     <dd class="tag-see">
         <ul>
-            <li><a href="TextComponent.html">TextComponent</a></li>
+            <li><a href="global.html#TextComponent">TextComponent</a></li>
         </ul>
     </dd>
     
@@ -423,7 +503,7 @@
         <p class="tag-source">
             <a href="helpers_getTranslation.tsx.html" class="button">View Source</a>
             <span>
-                <a href="helpers_getTranslation.tsx.html">helpers/getTranslation.tsx</a>, <a href="helpers_getTranslation.tsx.html#line28">line 28</a>
+                <a href="helpers_getTranslation.tsx.html">helpers/getTranslation.tsx</a>, <a href="helpers_getTranslation.tsx.html#line29">line 29</a>
             </span>
         </p>
     
@@ -455,17 +535,9 @@
 <div class="columns">
     
     <div class='param-desc column is-7'><ul>
-<li>message</li>
+<li>return tranlate in locale language</li>
 </ul></div>
     
-    
-    <div class='column is-5 has-text-left'>
-        <label>Type: </label>
-        
-<span class="param-type">string</span>
-
-
-    </div>
     
 </div>
 
@@ -496,7 +568,7 @@
     
     
     <div class="description">
-        <p>Function that changes the language</p>
+        <p>setLanguage='en-US'</p>
     </div>
     
 
@@ -598,7 +670,7 @@
         <p class="tag-source">
             <a href="helpers_getTranslation.tsx.html" class="button">View Source</a>
             <span>
-                <a href="helpers_getTranslation.tsx.html">helpers/getTranslation.tsx</a>, <a href="helpers_getTranslation.tsx.html#line19">line 19</a>
+                <a href="helpers_getTranslation.tsx.html">helpers/getTranslation.tsx</a>, <a href="helpers_getTranslation.tsx.html#line20">line 20</a>
             </span>
         </p>
     
@@ -621,13 +693,32 @@
 
 
 
+    <div class='columns method-parameter'>
+        <div class="column is-2"><label>Returns:</label></div>
+        <div class="column is-10">
+            
+                    
+
+<div class="columns">
+    
+    <div class='param-desc column is-7'><ul>
+<li>return new language</li>
+</ul></div>
+    
+    
+</div>
+
+                
+        </div>
+    </div>
+
 
 
 
     <h5>Example</h5>
     
     
-        <pre class="prettyprint"><code>setLanguage='en-US'</code></pre>
+        <pre class="prettyprint"><code>'en-EN'</code></pre>
     
 
 
@@ -637,6 +728,142 @@
         </div>
     
 
+    
+        <div class='vertical-section'>
+            <h1>Type Definitions</h1>
+            <div class="members">
+            
+                <div class="member">
+
+    <span class="method-parameter is-pulled-right">
+        <label>Type:</label>
+        
+<span class="param-type">object</span>
+
+
+    </span>
+
+<h4 class="name" id="TextComponentProps">
+    <a class="href-link" href="#TextComponentProps">#</a>
+    
+    <span class="code-name">
+        TextComponentProps
+    </span>
+    
+</h4>
+
+
+
+
+<div class="description">
+    <p>Props types</p>
+</div>
+
+
+
+
+
+    <h5 class="subsection-title">Properties:</h5>
+
+    
+<div class="table-container">
+    <table class="props table">
+        <thead>
+        <tr>
+            
+            <th>Name</th>
+            
+
+            <th>Type</th>
+
+            
+
+            
+
+            <th class="last">Description</th>
+        </tr>
+        </thead>
+
+        <tbody>
+        
+            
+<tr class="deep-level-0">
+    
+        <td class="name"><code>text</code></td>
+    
+
+    <td class="type">
+    
+        
+<span class="param-type">string</span>
+
+
+    
+    </td>
+
+    
+
+    
+
+    <td class="description last"></td>
+</tr>
+
+        
+        </tbody>
+    </table>
+</div>
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    
+
+    
+
+    
+
+    
+        <p class="tag-source">
+            <a href="components_ui_TextComponent_TextComponent.tsx.html" class="button">View Source</a>
+            <span>
+                <a href="components_ui_TextComponent_TextComponent.tsx.html">components/ui/TextComponent/TextComponent.tsx</a>, <a href="components_ui_TextComponent_TextComponent.tsx.html#line19">line 19</a>
+            </span>
+        </p>
+    
+</dl>
+
+
+
+
+
+</div>
+            
+            </div>
+        </div>
     
 
     
