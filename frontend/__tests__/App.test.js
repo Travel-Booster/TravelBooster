@@ -6,11 +6,10 @@ const component = <App />
 let wrapper
 
 it('<App /> renders', () => {
-    wrapper = renderer.create(component).toJSON();
-    expect(wrapper).toBeTruthy();
+    wrapper = renderer.create(component).toJSON()
+    expect(wrapper).toBeTruthy()
 })
     
 it('<App /> test snapshot', () => {
-    expect(wrapper).toMatchSnapshot();
+    expect(wrapper).toMatchSnapshot()
 })
-
