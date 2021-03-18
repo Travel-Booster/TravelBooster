@@ -1,7 +1,9 @@
 {
     "compilerOptions": {
         "noEmit": true,
-        "lib": [ "dom", "esnext" ],
+        "lib": [ "dom", "DOM.Iterable","esnext" ],
+        "allowJs":true,
+        "checkJs": true,
         "jsx": "react-native",
         "moduleResolution": "node",
         "resolveJsonModule": true,
@@ -13,6 +15,7 @@
         "noImplicitAny": true,
         "noImplicitThis": true,
         "noImplicitReturns": true,
-        "baseUrl": "./src"
+        "baseUrl": "./src",
+        "target": "esnext"
     }
 }
