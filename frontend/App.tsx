@@ -9,7 +9,7 @@ const App = () => {
     <View style={styles.container}>
       <TextComponent text='hello' />
       <ButtonComponent>
-        Click me
+        <TextComponent text='button' />
       </ButtonComponent>
       <StatusBar style='auto' />
     </View>
