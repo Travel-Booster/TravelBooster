@@ -1,5 +1,6 @@
 import React, { memo } from 'react'
 import { StyleSheet, TouchableOpacity } from 'react-native'
+import colors from 'services/styles/colors'
 import TextComponent from 'components/ui/TextComponent'
 
 /**
@@ -7,7 +8,9 @@ import TextComponent from 'components/ui/TextComponent'
  */
 type ButtonComponentProps = {
     text: string,
-    action: () => void
+    action: () => void,
+    color?: string,
+    width?: string
 }
 
 /**
@@ -16,16 +19,30 @@ type ButtonComponentProps = {
  * @description Button Component
  * @param {any} text - button content
  * @param {function} action - button action
+ * @param {string} color - button color, default: 'primary'
+ * @param {string} width - button width, default: 'none'
  * @returns {object} - return component with children
  */
 const ButtonComponent = memo<ButtonComponentProps>(({
     text,
-    action
+    action,
+    color,
+    width
 }) => {
     return (
         <TouchableOpacity
             onPress={action}
-            style={styles.button}>
+            style={{
+                ...styles.button,
+                backgroundColor: 
+                    color === 'error'
+                        ? colors.LIGHT_BUTTON_ERROR
+                        : colors.LIGHT_BUTTON_PRIMARY,
+                width:
+                    width === 'full'
+                        ? '100%'
+                        : 'none'
+            }}>
             <TextComponent 
                 text={text}
                 variant='button' />
@@ -35,13 +52,11 @@ const ButtonComponent = memo<ButtonComponentProps>(({
 
 const styles = StyleSheet.create({
     button: {
-        marginTop: 50,
         paddingHorizontal: 20,
         paddingVertical: 8,
         borderRadius: 20, 
         alignContent: 'center',
-        justifyContent: 'center',
-        backgroundColor: '#8685ef',
+        alignItems: 'center'
     }
 })
 
