@@ -34,14 +34,12 @@ const ButtonComponent = memo<ButtonComponentProps>(({
             onPress={action}
             style={{
                 ...styles.button,
-                backgroundColor: 
-                    color === 'error'
-                        ? colors.LIGHT_BUTTON_ERROR
-                        : colors.LIGHT_BUTTON_PRIMARY,
-                width:
-                    width === 'full'
-                        ? '100%'
-                        : 'none'
+                backgroundColor: color === 'error'
+                    ? colors.LIGHT_BUTTON_ERROR
+                    : colors.LIGHT_BUTTON_PRIMARY,
+                width: width === 'full'
+                    ? '100%'
+                    : 'none'
             }}>
             <TextComponent 
                 text={text}
