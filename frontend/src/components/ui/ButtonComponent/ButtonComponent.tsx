@@ -39,9 +39,8 @@ const styles = StyleSheet.create({
         paddingHorizontal: 20,
         paddingVertical: 8,
         borderRadius: 20, 
-        diplay: 'flex',
+        alignContent: 'center',
         justifyContent: 'center',
-        alignItems: 'center',
         backgroundColor: '#8685ef',
     }
 })
