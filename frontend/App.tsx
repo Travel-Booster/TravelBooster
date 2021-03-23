@@ -1,21 +1,16 @@
 import React from 'react'
 import { StatusBar } from 'expo-status-bar'
-import AppLoading from 'expo-app-loading'
 import { StyleSheet, View } from 'react-native'
-import {
-  useFonts,
-  Montserrat_400Regular,
-  Montserrat_600SemiBold,
-  Montserrat_800ExtraBold
-} from '@expo-google-fonts/montserrat'
+import { useFonts } from 'expo-font'
+import AppLoading from 'expo-app-loading'
 import TextComponent from 'components/ui/TextComponent'
 import ButtonComponent from 'components/ui/ButtonComponent'
 
 const App = () => {
   let [fontsLoaded] = useFonts({
-    Montserrat_400Regular,
-    Montserrat_600SemiBold,
-    Montserrat_800ExtraBold
+    'montserrat-regular': require('./assets/fonts/Montserrat-Regular.ttf'),
+    'montserrat-semi-bold': require('./assets/fonts/Montserrat-SemiBold.ttf'),
+    'montserrat-bold': require('./assets/fonts/Montserrat-Bold.ttf')
   })
 
   return (
@@ -36,7 +31,8 @@ const styles = StyleSheet.create({
     flex: 1,
     backgroundColor: '#ffffff',
     alignItems: 'center',
-    justifyContent: 'center'
+    justifyContent: 'center',
+    fontFamily: 'Regular'
   },
 })
 
