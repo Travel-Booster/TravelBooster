@@ -39,7 +39,7 @@ const ButtonComponent = memo<ButtonComponentProps>(({
                     : colors.LIGHT_BUTTON_PRIMARY,
                 width: width === 'full'
                     ? '100%'
-                    : 'none'
+                    : 'auto'
             }}>
             <TextComponent 
                 text={text}
