@@ -5,17 +5,19 @@ import { StyleSheet, TouchableOpacity } from 'react-native'
  * Props types
  */
 type ButtonComponentProps = {
-    children: any
+    children: any,
+    action: Function
 }
 
 /**
  * Button Component
- * @description Uses message function to return desired text
+ * @component
+ * @description Button Component
  * @param {any} children - button content
- * @param {function} onClick - button action
+ * @param {function} action - button action
  * @returns {object} - return component with children
  */
-const ButtonComponent = memo<ButtonComponentProps>(({ 
+const ButtonComponent = memo<ButtonComponentProps>(({
     children
 }) => {
     return (
@@ -33,8 +35,9 @@ const styles = StyleSheet.create({
         paddingHorizontal: 20,
         paddingVertical: 8,
         borderRadius: 20, 
-        textAlignVertical: 'center',
-        textAlignHorizontal: 'center',
+        diplay: 'flex',
+        justifyContent: 'center',
+        alignItems: 'center',
         color: '#ffffff',
         backgroundColor: '#8685ef'
     }

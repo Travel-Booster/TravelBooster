@@ -11,6 +11,7 @@ type TextComponentProps = {
 
 /**
  * Text Component
+ * @component
  * @description Uses message function to return desired text
  * @param {string} text - tranlation from i18n
  * @returns {object} - return component with children
