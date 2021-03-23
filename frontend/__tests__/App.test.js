@@ -1,12 +1,11 @@
 import React from 'react'
 import renderer from 'react-test-renderer'
-import App from './../App.tsx'
+import App from './../App'
 
 const component = <App />
-let wrapper
+let wrapper = renderer.create(component).toJSON()
 
 it('<App /> renders', () => {
-    wrapper = renderer.create(component).toJSON()
     expect(wrapper).toBeTruthy()
 })
     

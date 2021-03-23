@@ -7,10 +7,9 @@ const props = {
 }
 
 const component = <TextComponent {...props} />
-let wrapper
+let wrapper = renderer.create(component).toJSON()
 
 it('<TextComponent /> renders', () => {
-    wrapper = renderer.create(component).toJSON()
     expect(wrapper).toBeTruthy()
 })
     
