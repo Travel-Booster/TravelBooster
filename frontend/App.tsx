@@ -8,7 +8,7 @@ const App = () => {
   return (
     <View style={styles.container}>
       <TextComponent text='hello' />
-      <ButtonComponent>
+      <ButtonComponent action={() => alert('button test')}>
         <TextComponent text='button' />
       </ButtonComponent>
       <StatusBar style='auto' />
@@ -19,7 +19,7 @@ const App = () => {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: '#fff',
+    backgroundColor: '#ffffff',
     alignItems: 'center',
     justifyContent: 'center',
   },

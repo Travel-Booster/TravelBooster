@@ -6,7 +6,7 @@ import { StyleSheet, TouchableOpacity } from 'react-native'
  */
 type ButtonComponentProps = {
     children: any,
-    action: Function
+    action: () => void
 }
 
 /**
@@ -18,11 +18,12 @@ type ButtonComponentProps = {
  * @returns {object} - return component with children
  */
 const ButtonComponent = memo<ButtonComponentProps>(({
-    children
+    children,
+    action
 }) => {
     return (
         <TouchableOpacity
-            onPress={() => alert('button test')}
+            onPress={action}
             style={styles.button}>
             {children}
         </TouchableOpacity>
