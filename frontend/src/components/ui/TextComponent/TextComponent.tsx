@@ -32,6 +32,7 @@ const TextComponent = memo<TextComponentProps>(({
     ? buttonTextStyles 
     : normalTextStyles
   )
+  
   return <Text>{message(text)}</Text>
 })
 
