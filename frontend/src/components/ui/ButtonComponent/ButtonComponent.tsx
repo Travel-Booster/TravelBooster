@@ -20,7 +20,7 @@ type ButtonComponentProps = {
  * @param {any} text - button content
  * @param {function} action - button action
  * @param {string} color - button color, default: 'primary'
- * @param {string} width - button width, default: 'none'
+ * @param {string} width - button width, default: 'auto'
  * @returns {object} - return component with children
  */
 const ButtonComponent = memo<ButtonComponentProps>(({
