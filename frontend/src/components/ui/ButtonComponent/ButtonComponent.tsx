@@ -1,11 +1,12 @@
 import React, { memo } from 'react'
 import { StyleSheet, TouchableOpacity } from 'react-native'
+import TextComponent from 'components/ui/TextComponent'
 
 /**
  * Props types
  */
 type ButtonComponentProps = {
-    children: any,
+    text: string,
     action: () => void
 }
 
@@ -13,19 +14,21 @@ type ButtonComponentProps = {
  * Button Component
  * @component
  * @description Button Component
- * @param {any} children - button content
+ * @param {any} text - button content
  * @param {function} action - button action
  * @returns {object} - return component with children
  */
 const ButtonComponent = memo<ButtonComponentProps>(({
-    children,
+    text,
     action
 }) => {
     return (
         <TouchableOpacity
             onPress={action}
             style={styles.button}>
-            {children}
+            <TextComponent 
+                text={text}
+                variant='button' />
         </TouchableOpacity>
     )
 })
@@ -39,8 +42,7 @@ const styles = StyleSheet.create({
         diplay: 'flex',
         justifyContent: 'center',
         alignItems: 'center',
-        color: '#ffffff',
-        backgroundColor: '#8685ef'
+        backgroundColor: '#8685ef',
     }
 })
 
