@@ -17,10 +17,43 @@ const App = () => {
     !fontsLoaded
       ? <AppLoading />
       : <View style={styles.container}>
+          <TextComponent 
+            text='hello'
+            variant='heading' />
+
+          <TextComponent 
+            text='hello'
+            variant='sub' />
+
+          <TextComponent 
+            text='hello'
+            variant='title' />
+
+          <TextComponent 
+            text='hello'
+            variant='description' />
+
           <TextComponent text='hello' />
+
           <ButtonComponent 
             action={() => alert('button test')}
             text='button' />
+
+          <ButtonComponent 
+            action={() => alert('button test')}
+            text='button'
+            color='error' />
+
+          <ButtonComponent 
+            action={() => alert('button test')}
+            text='button'
+            width='full' />
+
+          <ButtonComponent 
+            action={() => alert('button test')}
+            text='button'
+            color='error'
+            width='full' />
           <StatusBar style='auto' />
         </View>
   )

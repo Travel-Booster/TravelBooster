@@ -27,11 +27,6 @@ export default StyleSheet.create({
     fontSize: 12,
     color: colors.LIGHT_GRAY_LIGHT
   },
-  input: { 
-    fontFamily: 'montserrat-regular',
-    fontSize: 16,
-    color: colors.LIGHT_GRAY_LIGHT
-  },
   button: { 
     fontFamily: 'montserrat-semi-bold',
     fontSize: 14,

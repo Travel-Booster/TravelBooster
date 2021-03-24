@@ -34,8 +34,6 @@ const TextComponent = memo<TextComponentProps>(({
         textVariant = styles.title
       } else if (variant == 'description') {
         textVariant = styles.description
-      } else if (variant == 'input') {
-        textVariant = styles.input
       } else if (variant == 'button') {
         textVariant = styles.button
       } else {
