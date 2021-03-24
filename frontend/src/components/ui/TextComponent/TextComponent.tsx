@@ -1,11 +1,7 @@
 import React, { memo } from 'react'
 import { Text } from 'react-native'
 import { message } from 'helpers/getTranslation'
-import { setCustomText } from 'react-native-global-props'
-import {
-  normalTextStyles,
-  buttonTextStyles
-} from './TextVariant'
+import styles from './TextStyles'
 
 /**
  * Props types
@@ -20,20 +16,36 @@ type TextComponentProps = {
  * @component
  * @description Uses message function to return desired text
  * @param {string} text - tranlation from i18n
- * @param {string} variant - text variant
+ * @param {string} variant - text variant, default: 'normal'
  * @returns {object} - return component with children
  */
 const TextComponent = memo<TextComponentProps>(({
   text,
   variant
 }) => {
-  setCustomText(
-    variant === 'button'
-    ? buttonTextStyles 
-    : normalTextStyles
-  )
+    const getVariant = () => {
+      let textVariant
+
+      if (variant == 'heading') {
+        textVariant = styles.heading
+      } else if (variant == 'sub') {
+        textVariant = styles.sub
+      } else if (variant == 'title') {
+        textVariant = styles.title
+      } else if (variant == 'description') {
+        textVariant = styles.description
+      } else if (variant == 'input') {
+        textVariant = styles.input
+      } else if (variant == 'button') {
+        textVariant = styles.button
+      } else {
+        textVariant = styles.normal
+      }
+
+      return textVariant
+    }
   
-  return <Text>{message(text)}</Text>
+  return <Text style={getVariant()}>{message(text)}</Text>
 })
 
 export default TextComponent
