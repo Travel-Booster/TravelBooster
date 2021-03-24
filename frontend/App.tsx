@@ -10,7 +10,7 @@ const App = () => {
   let [fontsLoaded] = useFonts({
     'montserrat-regular': require('./assets/fonts/Montserrat-Regular.ttf'),
     'montserrat-semi-bold': require('./assets/fonts/Montserrat-SemiBold.ttf'),
-    'montserrat-bold': require('./assets/fonts/Montserrat-Bold.ttf')
+    'montserrat-extra-bold': require('./assets/fonts/Montserrat-ExtraBold.ttf')
   })
 
   return (
