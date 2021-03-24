@@ -2,9 +2,12 @@ import React from 'react'
 import { StatusBar } from 'expo-status-bar'
 import { StyleSheet, View } from 'react-native'
 import { useFonts } from 'expo-font'
+import colors from 'styles/colors'
+import paddings from 'styles/paddings'
 import AppLoading from 'expo-app-loading'
 import TextComponent from 'components/ui/TextComponent'
 import ButtonComponent from 'components/ui/ButtonComponent'
+import DividerComponent from 'components/ui/DividerComponent'
 
 const App = () => {
   let [fontsLoaded] = useFonts({
@@ -21,33 +24,52 @@ const App = () => {
             text='hello'
             variant='heading' />
 
+          <DividerComponent 
+            size='big' />
+
           <TextComponent 
             text='hello'
             variant='sub' />
+
+          <DividerComponent />
 
           <TextComponent 
             text='hello'
             variant='title' />
 
+          <DividerComponent 
+            size='tiny' />
+
           <TextComponent 
             text='hello'
             variant='description' />
 
+          <DividerComponent 
+            size='small' />
+
           <TextComponent text='hello' />
+
+          <DividerComponent />
 
           <ButtonComponent 
             action={() => alert('button test')}
             text='button' />
+
+          <DividerComponent />
 
           <ButtonComponent 
             action={() => alert('button test')}
             text='button'
             color='error' />
 
+          <DividerComponent />
+
           <ButtonComponent 
             action={() => alert('button test')}
             text='button'
             width='full' />
+
+          <DividerComponent />
 
           <ButtonComponent 
             action={() => alert('button test')}
@@ -62,11 +84,12 @@ const App = () => {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: '#ffffff',
+    padding: paddings.BIG,
+    backgroundColor: colors.LIGHT_MAIN,
     alignItems: 'center',
     justifyContent: 'center',
     fontFamily: 'Regular'
-  },
+  }
 })
 
 export default App
