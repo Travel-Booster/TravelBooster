@@ -30,9 +30,9 @@ const ButtonComponent = memo<ButtonComponentProps>(({
     color,
     width
 }) => {
-    
+
     /**
-     * Get button color and set buttonColor
+     * Get button color
      */      
     const getButtonColor = () => {
         let buttonColor
@@ -45,7 +45,7 @@ const ButtonComponent = memo<ButtonComponentProps>(({
     }
     
     /**
-     * Get button width and set buttonWidth
+     * Get button width
      */  
     const getButtonWidth = () => {
         let buttonWidth
