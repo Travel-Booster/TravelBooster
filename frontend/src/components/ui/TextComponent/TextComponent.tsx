@@ -23,6 +23,10 @@ const TextComponent = memo<TextComponentProps>(({
   text,
   variant
 }) => {
+
+    /**
+     * Get text variant
+     */
     const getVariant = () => {
       let textVariant
 

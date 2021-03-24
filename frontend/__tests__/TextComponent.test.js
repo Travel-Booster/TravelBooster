@@ -3,7 +3,8 @@ import renderer from 'react-test-renderer'
 import TextComponent from 'components/ui/TextComponent'
 
 const props = {
-    text: 'hello'
+    text: 'hello',
+    variant: 'button'
 }
 
 const component = <TextComponent {...props} />
