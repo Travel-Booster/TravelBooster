@@ -3,7 +3,7 @@ import renderer from 'react-test-renderer'
 import ButtonComponent from 'components/ui/ButtonComponent'
 
 const props = {
-    text: 'button',
+    text: 'hello',
     action: () => console.log('test'),
     color: 'error',
     width: 'full'
