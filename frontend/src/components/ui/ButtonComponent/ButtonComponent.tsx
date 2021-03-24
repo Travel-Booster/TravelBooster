@@ -1,6 +1,5 @@
 import React, { memo } from 'react'
 import { TouchableOpacity } from 'react-native'
-// import colors from 'services/styles/colors'
 import TextComponent from 'components/ui/TextComponent'
 import styles from './ButtonStyles'
 
