@@ -3,43 +3,26 @@ import { View } from 'react-native'
 import styles from './DividerStyles'
 
 /**
- * Props types
- */
-type DividerComponentProps = {
-    size?: string
-}
-
-/**
  * Divider Component
  * @component
  * @description Divider Component
- * @param {any} size - divider size
+ * @param {any} size - divider size, default: 'medium' (optional props)
  * @returns {object} - return component with children
  */
-const DividerComponent = memo<DividerComponentProps>(({ size }) => {
+const DividerComponent = memo<DividerComponentProps>(({
+    size = 'medium',
+}) => <View style={styles[size]} />)
 
-    /**
-     * Get divider size
-     */      
-    const getDividerSize = () => {
-        let dividerSize
+/**
+ * Props types
+ */
+type DividerComponentProps = {
+    size?: Sizes
+}
 
-        if (size === 'tiny') {
-            dividerSize = styles.tiny
-        } else if (size === 'small') {
-            dividerSize = styles.small
-        } else if (size === 'big') {
-            dividerSize = styles.big
-        } else {
-            dividerSize = styles.medium
-        }
-
-        return dividerSize
-    }
-
-    return (
-        <View style={getDividerSize()} />
-    )
-})
+/**
+ *  Width variant
+ */
+type Sizes = 'tiny' | 'small' | 'medium' | 'big'
 
 export default DividerComponent
