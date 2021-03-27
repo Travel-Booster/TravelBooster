@@ -13,19 +13,8 @@ import styles from './TextStyles'
  */
 const TextComponent = memo<TextComponentProps>(({
   text,
-<<<<<<< HEAD
-  variant
-}) => {
-
-    /**
-     * Get text variant
-     */
-    const getVariant = () => {
-      let textVariant
-=======
   variant = 'normal'
 }) => <Text style={styles[variant]}>{message(text)}</Text>)
->>>>>>> FRO-1
 
 /**
  * Props types
