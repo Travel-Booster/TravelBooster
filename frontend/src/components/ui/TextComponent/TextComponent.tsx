@@ -24,7 +24,7 @@ const TextComponent = memo<TextComponentProps>(({
   variant
 }) => {
     const getVariant = () => {
-      let textVariant
+      let textVariant = styles.normal
 
       if (variant === 'heading') {
         textVariant = styles.heading
@@ -36,8 +36,6 @@ const TextComponent = memo<TextComponentProps>(({
         textVariant = styles.description
       } else if (variant === 'button') {
         textVariant = styles.button
-      } else {
-        textVariant = styles.normal
       }
 
       return textVariant
