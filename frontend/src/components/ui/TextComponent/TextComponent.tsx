@@ -16,7 +16,7 @@ type TextComponentProps = {
  * @component
  * @description Uses message function to return desired text
  * @param {string} text - tranlation from i18n
- * @param {string} variant - text variant, default: 'normal'
+ * @param {string} variant - text variant, default: 'normal' (ptional props)
  * @returns {object} - return component with children
  */
 const TextComponent = memo<TextComponentProps>(({
@@ -26,15 +26,15 @@ const TextComponent = memo<TextComponentProps>(({
     const getVariant = () => {
       let textVariant
 
-      if (variant == 'heading') {
+      if (variant === 'heading') {
         textVariant = styles.heading
-      } else if (variant == 'sub') {
+      } else if (variant === 'sub') {
         textVariant = styles.sub
-      } else if (variant == 'title') {
+      } else if (variant === 'title') {
         textVariant = styles.title
-      } else if (variant == 'description') {
+      } else if (variant === 'description') {
         textVariant = styles.description
-      } else if (variant == 'button') {
+      } else if (variant === 'button') {
         textVariant = styles.button
       } else {
         textVariant = styles.normal

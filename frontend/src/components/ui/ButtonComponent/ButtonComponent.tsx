@@ -1,6 +1,5 @@
 import React, { memo } from 'react'
 import { TouchableOpacity } from 'react-native'
-// import colors from 'services/styles/colors'
 import TextComponent from 'components/ui/TextComponent'
 import styles from './ButtonStyles'
 
@@ -18,10 +17,10 @@ type ButtonComponentProps = {
  * Button Component
  * @component
  * @description Button Component
- * @param {any} text - button content
+ * @param {string} text - button content
  * @param {function} action - button action
- * @param {string} color - button color, default: 'primary'
- * @param {string} width - button width, default: 'auto'
+ * @param {string} color - button color, default: 'primary' (ptional props)
+ * @param {string} width - button width, default: 'auto' (ptional props)
  * @returns {object} - return component with children
  */
 const ButtonComponent = memo<ButtonComponentProps>(({
