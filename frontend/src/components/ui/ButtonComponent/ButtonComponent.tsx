@@ -4,65 +4,28 @@ import TextComponent from 'components/ui/TextComponent'
 import styles from './ButtonStyles'
 
 /**
- * Props types
- */
-type ButtonComponentProps = {
-    text: string,
-    action: () => void,
-    color?: string,
-    width?: string
-}
-
-/**
  * Button Component
  * @component
  * @description Button Component
- * @param {any} text - button content
+ * @param {string} text - button content
  * @param {function} action - button action
- * @param {string} color - button color, default: 'primary'
- * @param {string} width - button width, default: 'auto'
+ * @param {string} color - button color, default: 'primary' (optional props)
+ * @param {string} width - button width, default: 'auto' (optional props)
  * @returns {object} - return component with children
  */
 const ButtonComponent = memo<ButtonComponentProps>(({
     text,
     action,
-    color,
-    width
+    color = 'primary',
+    width = 'auto'
 }) => {
-
-    /**
-     * Get button color
-     */      
-    const getButtonColor = () => {
-        let buttonColor
-
-        color === 'error'
-            ? buttonColor = styles.error
-            : buttonColor = styles.primary
-
-        return buttonColor
-    }
-    
-    /**
-     * Get button width
-     */  
-    const getButtonWidth = () => {
-        let buttonWidth
-
-        width === 'full'
-            ? buttonWidth = styles.full
-            : buttonWidth = null
-
-        return buttonWidth
-    }
-
     return (
         <TouchableOpacity
             onPress={action}
             style={{
                 ...styles.button,
-                ...getButtonColor(),
-                ...getButtonWidth()
+                ...styles[color],
+                ...styles[width]
             }}>
             <TextComponent 
                 text={text}
@@ -70,5 +33,25 @@ const ButtonComponent = memo<ButtonComponentProps>(({
         </TouchableOpacity>
     )
 })
+
+/**
+ * Props types
+ */
+type ButtonComponentProps = {
+    text: string,
+    action: () => void,
+    color?: Colors,
+    width?: Width
+}
+
+/**
+ *  Color variant
+ */
+type Colors = 'primary' | 'error'
+
+/**
+ *  Width variant
+ */
+type Width = 'auto' | 'full'
 
 export default ButtonComponent

@@ -16,6 +16,9 @@ export default StyleSheet.create({
   error: {
     backgroundColor: colors.LIGHT_BUTTON_ERROR
   },
+  auto: {
+    width: 'auto'
+  },
   full: {
     width: '100%'
   }
