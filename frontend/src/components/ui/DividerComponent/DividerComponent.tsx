@@ -21,7 +21,7 @@ type DividerComponentProps = {
 }
 
 /**
- *  Width variant
+ *  Size variant
  */
 type Sizes = 'tiny' | 'small' | 'medium' | 'big'
 
