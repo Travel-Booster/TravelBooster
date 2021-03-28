@@ -1,7 +1,6 @@
-import { message } from 'helpers/getTranslation'
 import React, { memo } from 'react'
 import { Text } from 'react-native'
-
+import { message } from 'helpers/getTranslation'
 import styles from './TextStyles'
 
 /**
