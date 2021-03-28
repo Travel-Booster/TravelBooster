@@ -1,7 +1,7 @@
 import * as Localization from 'expo-localization'
 import i18n from 'i18n-js'
-import messeges_en from 'services/i18n/en.json'
-import messeges_pl from 'services/i18n/pl.json'
+import messeges_en from 'i18n/en.json'
+import messeges_pl from 'i18n/pl.json'
 
 /**
  * Default language is taken from phone settings
@@ -19,7 +19,7 @@ let language: string = Localization.locale
  * @returns - return new language
  */
 const setLanguage = (newLanguage: string) => {
-  language = newLanguage
+	language = newLanguage
 }
 
 /**
@@ -29,23 +29,23 @@ const setLanguage = (newLanguage: string) => {
  * @returns - return tranlate in locale language
  */
 const message = (message: string) => {
-  i18n.translations = {
-    en: messeges_en,
-    pl: messeges_pl,
-  }
+	i18n.translations = {
+		en: messeges_en,
+		pl: messeges_pl,
+	}
 
-/**
- * Set locale language to i18n
- */
-  i18n.locale = language
-  i18n.fallbacks = true
+	/**
+	 * Set locale language to i18n
+	 */
+	i18n.locale = language
+	i18n.fallbacks = true
 
-  /**
-   * Function that returns message for TextComponent
-   * @param {string} message - set translation key
-   * @returns {string} - return translate
-   */
-  return i18n.t(message)
+	/**
+	 * Function that returns message for TextComponent
+	 * @param {string} message - set translation key
+	 * @returns {string} - return translate
+	 */
+	return i18n.t(message)
 }
 
 export { setLanguage, message }

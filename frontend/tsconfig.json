@@ -1,21 +1,21 @@
 {
-    "compilerOptions": {
-        "noEmit": true,
-        "lib": [ "dom", "DOM.Iterable","esnext" ],
-        "allowJs":true,
-        "checkJs": true,
-        "jsx": "react-native",
-        "moduleResolution": "node",
-        "resolveJsonModule": true,
-        "allowSyntheticDefaultImports": true,
-        "skipLibCheck": true,
-        "strictBindCallApply": true,
-        "strictNullChecks": true,
-        "strictPropertyInitialization": true,
-        "noImplicitAny": true,
-        "noImplicitThis": true,
-        "noImplicitReturns": true,
-        "baseUrl": "./src",
-        "target": "esnext"
-    }
+	"compilerOptions": {
+		"noEmit": true,
+		"lib": ["dom", "DOM.Iterable", "esnext"],
+		"allowJs": true,
+		"checkJs": true,
+		"jsx": "react-native",
+		"moduleResolution": "node",
+		"resolveJsonModule": true,
+		"allowSyntheticDefaultImports": true,
+		"skipLibCheck": true,
+		"strictBindCallApply": true,
+		"strictNullChecks": true,
+		"strictPropertyInitialization": true,
+		"noImplicitAny": true,
+		"noImplicitThis": true,
+		"noImplicitReturns": true,
+		"baseUrl": "./src",
+		"target": "esnext"
+	}
 }

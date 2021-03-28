@@ -9,15 +9,15 @@ import styles from './DividerStyles'
  * @param {any} size - divider size, default: 'medium' (optional props)
  * @returns {object} - return component with children
  */
-const DividerComponent = memo<DividerComponentProps>(({
-    size = 'medium',
-}) => <View style={styles[size]} />)
+const DividerComponent = memo<DividerComponentProps>(
+	({ size = 'medium' }) => <View style={styles[size]} />,
+)
 
 /**
  * Props types
  */
 type DividerComponentProps = {
-    size?: Sizes
+	size?: Sizes
 }
 
 /**
