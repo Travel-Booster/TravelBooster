@@ -3,10 +3,10 @@ import paddings from 'variables/paddings'
 
 export default StyleSheet.create({
 	tiny: {
-		height: paddings.TINY,
+		height: paddings.TEENY,
 	},
 	small: {
-		height: paddings.SMALL,
+		height: paddings.TINY,
 	},
 	medium: {
 		height: paddings.MEDIUM,

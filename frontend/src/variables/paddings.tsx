@@ -1,6 +1,7 @@
 export default {
-	TINY: 5,
-	SMALL: 10,
+	TEENY: 5,
+	TINY: 10,
+	SMALL: 15,
 	MEDIUM: 20,
 	BIG: 40,
 }
