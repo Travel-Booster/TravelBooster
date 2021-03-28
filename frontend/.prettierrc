@@ -8,5 +8,14 @@
 	"trailingComma": "all",
 	"bracketSpacing": true,
 	"arrowParens": "avoid",
-	"htmlWhitespaceSensitivity": "strict"
+	"htmlWhitespaceSensitivity": "strict",
+	"importOrder": [
+		"^components/ui/(.*)$",
+		"^components/screens/(.*)$",
+		"^i18n/(.*)$",
+		"^helpers/(.*)$",
+		"^variables/(.*)$",
+		"^[./]"
+	],
+	"importOrderSeparation": false
 }
