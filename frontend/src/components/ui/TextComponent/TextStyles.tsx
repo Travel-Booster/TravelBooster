@@ -1,6 +1,6 @@
 import { StyleSheet } from 'react-native'
-import colors from 'styles/colors'
-import fontsizes from 'styles/fontsizes'
+import colors from 'variables/colors'
+import fontsizes from 'variables/fontsizes'
 
 export default StyleSheet.create({
 	normal: {

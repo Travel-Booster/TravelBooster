@@ -6,8 +6,8 @@ import { useFonts } from 'expo-font'
 import { StatusBar } from 'expo-status-bar'
 import React from 'react'
 import { StyleSheet, View } from 'react-native'
-import colors from 'styles/colors'
-import paddings from 'styles/paddings'
+import colors from 'variables/colors'
+import paddings from 'variables/paddings'
 
 const App = () => {
 	const [fontsLoaded] = useFonts({
@@ -20,12 +20,7 @@ const App = () => {
 		<AppLoading />
 	) : (
 		<View style={styles.container}>
-			<TextComponent
-				text="hello"
-				variant="heading"
-				variant="heading"
-				variant="heading"
-			/>
+			<TextComponent text="hello" variant="heading" />
 
 			<DividerComponent size="big" />
 
@@ -45,7 +40,10 @@ const App = () => {
 
 			<DividerComponent />
 
-			<ButtonComponent action={() => alert('button test')} text="button" />
+			<ButtonComponent
+				action={() => alert('button test')}
+				text="button"
+			/>
 
 			<DividerComponent />
 

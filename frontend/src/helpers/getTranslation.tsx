@@ -1,7 +1,7 @@
 import * as Localization from 'expo-localization'
 import i18n from 'i18n-js'
-import messeges_en from 'services/i18n/en.json'
-import messeges_pl from 'services/i18n/pl.json'
+import messeges_en from 'i18n/en.json'
+import messeges_pl from 'i18n/pl.json'
 
 /**
  * Default language is taken from phone settings

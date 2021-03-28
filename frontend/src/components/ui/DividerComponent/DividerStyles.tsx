@@ -1,5 +1,5 @@
 import { StyleSheet } from 'react-native'
-import paddings from 'styles/paddings'
+import paddings from 'variables/paddings'
 
 export default StyleSheet.create({
 	tiny: {
