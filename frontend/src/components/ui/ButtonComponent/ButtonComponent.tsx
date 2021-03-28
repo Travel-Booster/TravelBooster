@@ -1,6 +1,7 @@
+import TextComponent from 'components/ui/TextComponent'
 import React, { memo } from 'react'
 import { TouchableOpacity } from 'react-native'
-import TextComponent from 'components/ui/TextComponent'
+
 import styles from './ButtonStyles'
 
 /**
@@ -13,35 +14,30 @@ import styles from './ButtonStyles'
  * @param {string} width - button width, default: 'auto' (optional props)
  * @returns {object} - return component with children
  */
-const ButtonComponent = memo<ButtonComponentProps>(({
-    text,
-    action,
-    color = 'primary',
-    width = 'auto'
-}) => {
-    return (
-        <TouchableOpacity
-            onPress={action}
-            style={{
-                ...styles.button,
-                ...styles[color],
-                ...styles[width]
-            }}>
-            <TextComponent 
-                text={text}
-                variant='button' />
-        </TouchableOpacity>
-    )
-})
+const ButtonComponent = memo<ButtonComponentProps>(
+	({ text, action, color = 'primary', width = 'auto' }) => {
+		return (
+			<TouchableOpacity
+				onPress={action}
+				style={{
+					...styles.button,
+					...styles[color],
+					...styles[width],
+				}}>
+				<TextComponent text={text} variant="button" />
+			</TouchableOpacity>
+		)
+	},
+)
 
 /**
  * Props types
  */
 type ButtonComponentProps = {
-    text: string,
-    action: () => void,
-    color?: Colors,
-    width?: Width
+	text: string
+	action: () => void
+	color?: Colors
+	width?: Width
 }
 
 /**

@@ -19,7 +19,7 @@ let language: string = Localization.locale
  * @returns - return new language
  */
 const setLanguage = (newLanguage: string) => {
-  language = newLanguage
+	language = newLanguage
 }
 
 /**
@@ -29,23 +29,23 @@ const setLanguage = (newLanguage: string) => {
  * @returns - return tranlate in locale language
  */
 const message = (message: string) => {
-  i18n.translations = {
-    en: messeges_en,
-    pl: messeges_pl,
-  }
+	i18n.translations = {
+		en: messeges_en,
+		pl: messeges_pl,
+	}
 
-/**
- * Set locale language to i18n
- */
-  i18n.locale = language
-  i18n.fallbacks = true
+	/**
+	 * Set locale language to i18n
+	 */
+	i18n.locale = language
+	i18n.fallbacks = true
 
-  /**
-   * Function that returns message for TextComponent
-   * @param {string} message - set translation key
-   * @returns {string} - return translate
-   */
-  return i18n.t(message)
+	/**
+	 * Function that returns message for TextComponent
+	 * @param {string} message - set translation key
+	 * @returns {string} - return translate
+	 */
+	return i18n.t(message)
 }
 
 export { setLanguage, message }
