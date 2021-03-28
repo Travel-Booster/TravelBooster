@@ -1,12 +1,15 @@
 import React from 'react'
 import renderer from 'react-test-renderer'
-import TextComponent from 'components/ui/TextComponent'
+import ButtonComponent from 'components/ui/ButtonComponent'
 
 const props = {
-    text: 'hello'
+    text: 'button',
+    action: () => console.log('test'),
+    color: 'error',
+    width: 'full'
 }
 
-const component = <TextComponent {...props} />
+const component = <ButtonComponent {...props} />
 let wrapper = renderer.create(component).toJSON()
 
 it('<TextComponent /> renders', () => {

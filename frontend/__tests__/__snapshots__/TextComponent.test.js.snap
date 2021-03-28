@@ -1,7 +1,15 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`<TextComponent /> test snapshot 1`] = `
-<Text>
+<Text
+  style={
+    Object {
+      "color": "#5E5E5E",
+      "fontFamily": "montserrat-regular",
+      "fontSize": 16,
+    }
+  }
+>
   Hello world
 </Text>
 `;
