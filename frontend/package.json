@@ -10,7 +10,7 @@
 		"build:docs": "./node_modules/.bin/jsdoc -c jsdoc.json",
 		"destroy:docs": "rm -rd ./docs",
 		"watch:doc-src": "watch \"npm run build:docs\" ./src",
-		"format": "prettier --write --config ./.prettierrc src/**/*{.tsx,.json}"
+		"format": "prettier --write --config ./.prettierrc src/**/*{.tsx,.json,.js}"
 	},
 	"dependencies": {
 		"@expo-google-fonts/montserrat": "0.1.0",
