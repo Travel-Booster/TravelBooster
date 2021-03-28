@@ -1,13 +1,12 @@
 import React from 'react'
 import renderer from 'react-test-renderer'
-import TextComponent from 'components/ui/TextComponent'
+import DividerComponent from 'components/ui/DividerComponent'
 
 const props = {
-    text: 'hello',
-    variant: 'button'
+    size: 'small'
 }
 
-const component = <TextComponent {...props} />
+const component = <DividerComponent {...props} />
 let wrapper = renderer.create(component).toJSON()
 
 it('<TextComponent /> renders', () => {

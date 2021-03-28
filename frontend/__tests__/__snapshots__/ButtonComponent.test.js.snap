@@ -33,7 +33,7 @@ exports[`<TextComponent /> test snapshot 1`] = `
       }
     }
   >
-    Click me!
+    Hello world
   </Text>
 </View>
 `;
