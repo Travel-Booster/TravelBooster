@@ -4,6 +4,26 @@ import TextComponent from 'components/ui/TextComponent'
 import styles from './ButtonStyles'
 
 /**
+ * Props types
+ */
+type ButtonComponentProps = {
+	text: string
+	action: () => void
+	color?: Colors
+	width?: Width
+}
+
+/**
+ *  Color variant
+ */
+type Colors = 'primary' | 'error'
+
+/**
+ *  Width variant
+ */
+type Width = 'auto' | 'full'
+
+/**
  * Button Component
  * @component
  * @description Button Component
@@ -28,25 +48,5 @@ const ButtonComponent = memo<ButtonComponentProps>(
 		)
 	},
 )
-
-/**
- * Props types
- */
-type ButtonComponentProps = {
-	text: string
-	action: () => void
-	color?: Colors
-	width?: Width
-}
-
-/**
- *  Color variant
- */
-type Colors = 'primary' | 'error'
-
-/**
- *  Width variant
- */
-type Width = 'auto' | 'full'
 
 export default ButtonComponent

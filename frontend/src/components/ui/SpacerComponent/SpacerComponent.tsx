@@ -3,17 +3,6 @@ import { View } from 'react-native'
 import styles from './SpacerStyles'
 
 /**
- * Spacer Component
- * @component
- * @description Spacer Component
- * @param {any} size - spacer size, default: 'medium' (optional props)
- * @returns {object} - return component with children
- */
-const SpacerComponent = memo<SpacerComponentProps>(
-	({ size = 'medium' }) => <View style={styles[size]} />,
-)
-
-/**
  * Props types
  */
 type SpacerComponentProps = {
@@ -24,5 +13,16 @@ type SpacerComponentProps = {
  *  Size variant
  */
 type Sizes = 'tiny' | 'small' | 'medium'
+
+/**
+ * Spacer Component
+ * @component
+ * @description Spacer Component
+ * @param {string} size - spacer size, default: 'medium' (optional props)
+ * @returns {object} - return component with children
+ */
+const SpacerComponent = memo<SpacerComponentProps>(
+	({ size = 'medium' }) => <View style={styles[size]} />,
+)
 
 export default SpacerComponent
