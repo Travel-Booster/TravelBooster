@@ -4,20 +4,6 @@ import { message } from 'helpers/getTranslation'
 import styles from './TextStyles'
 
 /**
- * Text Component
- * @component
- * @description Uses message function to return desired text
- * @param {string} text - tranlation from i18n
- * @param {string} variant - text variant, default: 'normal' (optional props)
- * @returns {object} - return component with children
- */
-const TextComponent = memo<TextComponentProps>(
-	({ text, variant = 'normal' }) => (
-		<Text style={styles[variant]}>{message(text)}</Text>
-	),
-)
-
-/**
  * Props types
  */
 type TextComponentProps = {
@@ -35,5 +21,19 @@ type Variants =
 	| 'title'
 	| 'description'
 	| 'button'
+
+/**
+ * Text Component
+ * @component
+ * @description Uses message function to return desired text
+ * @param {string} text - tranlation from i18n
+ * @param {string} variant - text variant, default: 'normal' (optional props)
+ * @returns {object} - return component with children
+ */
+const TextComponent = memo<TextComponentProps>(
+	({ text, variant = 'normal' }) => (
+		<Text style={styles[variant]}>{message(text)}</Text>
+	),
+)
 
 export default TextComponent

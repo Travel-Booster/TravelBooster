@@ -2,9 +2,10 @@ import AppLoading from 'expo-app-loading'
 import { useFonts } from 'expo-font'
 import { StatusBar } from 'expo-status-bar'
 import React from 'react'
-import { StyleSheet, View } from 'react-native'
+import { StyleSheet, View, Text } from 'react-native'
 import ButtonComponent from 'components/ui/ButtonComponent'
 import DividerComponent from 'components/ui/DividerComponent'
+import SpacerComponent from 'components/ui/SpacerComponent'
 import TextComponent from 'components/ui/TextComponent'
 import colors from 'variables/colors'
 import paddings from 'variables/paddings'
@@ -32,7 +33,13 @@ const App = () => {
 
 			<DividerComponent size="tiny" />
 
-			<TextComponent text="hello" variant="description" />
+			<Text>
+				<TextComponent text="hello" variant="description" />
+				<SpacerComponent size="tiny" />
+				<TextComponent text="hello" variant="description" />
+				<SpacerComponent />
+				<TextComponent text="hello" variant="description" />
+			</Text>
 
 			<DividerComponent size="small" />
 
