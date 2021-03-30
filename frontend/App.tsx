@@ -1,8 +1,13 @@
-import AppLoading from 'expo-app-loading'
-import { useFonts } from 'expo-font'
+import * as Font from 'expo-font'
+import * as SplashScreen from 'expo-splash-screen'
 import { StatusBar } from 'expo-status-bar'
-import React from 'react'
+import React, {
+	useState,
+	useEffect,
+	useCallback,
+} from 'react'
 import { StyleSheet, View, Text } from 'react-native'
+import { WebView } from 'react-native-webview'
 import ButtonComponent from 'components/ui/ButtonComponent'
 import DividerComponent from 'components/ui/DividerComponent'
 import SpacerComponent from 'components/ui/SpacerComponent'
@@ -11,16 +16,55 @@ import colors from 'variables/colors'
 import paddings from 'variables/paddings'
 
 const App = () => {
-	const [fontsLoaded] = useFonts({
-		'montserrat-regular': require('./assets/fonts/Montserrat-Regular.ttf'),
-		'montserrat-semi-bold': require('./assets/fonts/Montserrat-SemiBold.ttf'),
-		'montserrat-extra-bold': require('./assets/fonts/Montserrat-ExtraBold.ttf'),
-	})
+	const [appIsReady, setAppIsReady] = useState(false)
 
-	return !fontsLoaded ? (
-		<AppLoading />
-	) : (
-		<View style={styles.container}>
+	useEffect(() => {
+		async function prepare() {
+			try {
+				await SplashScreen.hideAsync()
+
+				await Font.loadAsync({
+					'montserrat-regular': require('./assets/fonts/Montserrat-Regular.ttf'),
+					'montserrat-semi-bold': require('./assets/fonts/Montserrat-SemiBold.ttf'),
+					'montserrat-extra-bold': require('./assets/fonts/Montserrat-ExtraBold.ttf'),
+				})
+
+				await new Promise(resolve =>
+					setTimeout(resolve, 3000),
+				)
+			} catch (error) {
+				console.warn(error)
+			} finally {
+				setAppIsReady(true)
+			}
+		}
+
+		prepare()
+	}, [])
+
+	const onLayoutRootView = useCallback(async () => {
+		if (appIsReady) {
+			await SplashScreen.hideAsync()
+		}
+	}, [appIsReady])
+
+	if (!appIsReady) {
+		return (
+			<View style={styles.container}>
+				<WebView
+					source={require('./assets/splash_logo.svg')}
+					style={{
+						width: 300,
+					}}
+				/>
+			</View>
+		)
+	}
+
+	return (
+		<View
+			style={styles.container}
+			onLayout={onLayoutRootView}>
 			<TextComponent text="hello" variant="heading" />
 
 			<DividerComponent size="big" />
